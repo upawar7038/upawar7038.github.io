@@ -302,17 +302,17 @@
         /* Photo styling */
         .photo-frame {
             position: relative;
-            padding: 4px;
-            border-radius: 24px;
+            padding: 3px;
+            border-radius: 16px;
             background: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4, #6366f1);
             background-size: 300% 300%;
             animation: photo-border 6s ease infinite;
+            display: inline-block;
+            line-height: 0;
         }
         .photo-frame img {
-            border-radius: 20px;
+            border-radius: 13px;
             display: block;
-            width: 100%;
-            height: auto;
             object-fit: cover;
         }
 
@@ -585,8 +585,9 @@
                                 <img 
                                     src="umesh-photo.jpg" 
                                     alt="Umesh Pawar" 
-                                    className="object-cover"
-                                    style={{ width: '160px', height: '160px', borderRadius: '20px' }}
+                                    width="160" 
+                                    height="160"
+                                    style={{ width: '160px', height: '160px', borderRadius: '20px', objectFit: 'cover', display: 'block' }}
                                 />
                             </div>
                         </div>
@@ -672,27 +673,27 @@
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className={`text-center mb-10 md:mb-16 ${isVisible ? '' : 'opacity-0'}`} style={isVisible ? { animation: 'slideUp 0.8s ease-out forwards' } : {}}>
                             <span className="text-indigo-400 text-xs md:text-sm font-semibold tracking-wider uppercase">About Me</span>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2">Passionate About <span className="gradient-text">Mobile Innovation</span></h2>
+                            <h2 className="text-lg md:text-xl font-bold mt-2">Passionate About <span className="gradient-text">Mobile Innovation</span></h2>
                         </div>
 
                         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                             <div className={isVisible ? '' : 'opacity-0'} style={isVisible ? { animation: 'slideInLeft 0.8s ease-out 0.2s forwards' } : {}}>
                                 <div className="relative">
                                     <div className="glass rounded-2xl md:rounded-3xl p-5 md:p-8 relative z-10">
-                                        <div className="flex items-start gap-3 md:gap-4 mb-4 md:mb-6">
-                                            {/* Photo in About Card */}
+                                        <div className="flex items-center gap-4 mb-5">
                                             <div className="photo-frame shrink-0">
                                                 <img 
                                                     src="umesh-photo.jpg" 
                                                     alt="Umesh Pawar" 
-                                                    className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-cover"
-                                                    style={{ aspectRatio: '1/1', borderRadius: '16px' }}
+                                                    width="64" 
+                                                    height="64"
+                                                    style={{ width: '64px', height: '64px', borderRadius: '13px', objectFit: 'cover', display: 'block' }}
                                                 />
                                             </div>
-                                            <div className="min-w-0">
-                                                <h3 className="text-lg md:text-xl font-bold">Umesh Pawar</h3>
-                                                <p className="text-text-muted text-xs md:text-sm">Pune, MH 411021</p>
-                                                <p className="text-indigo-400 text-xs md:text-sm font-medium mt-0.5">Senior Mobile Developer</p>
+                                            <div className="min-w-0 overflow-hidden">
+                                                <h3 className="text-lg font-bold truncate">Umesh Pawar</h3>
+                                                <p className="text-text-muted text-sm truncate">Pune, MH 411021</p>
+                                                <p className="text-indigo-400 text-sm font-medium">Senior Mobile Developer</p>
                                             </div>
                                         </div>
 
@@ -1257,7 +1258,7 @@ Sent via Portfolio Contact Form`
             <footer className="py-6 md:py-8 border-t border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
                     <div className="text-xl md:text-2xl font-black gradient-text">UP.</div>
-                    <p className="text-xs md:text-sm text-text-muted">© 2026 Umesh Pawar. All rights reserved.</p>
+                    <p className="text-xs md:text-sm text-text-muted">© 2024 Umesh Pawar. All rights reserved.</p>
                     <div className="flex gap-4 md:gap-6 text-xs md:text-sm text-text-muted">
                         <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Home</button>
                         <button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Projects</button>
